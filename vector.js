@@ -1,4 +1,4 @@
-export default class Vector {
+class Vector {
   constructor(x, y, z) {
     this.x = x;
     this.y = y;
@@ -19,5 +19,9 @@ export default class Vector {
 
   scale(number) {
     return new Vector(this.x * number, this.y * number, this.z * number);
+  }
+
+  static linearInterpolation(startVector, endVector, alpha) {
+    return startVector.scale(1 - alpha).add(endVector.scale(alpha));
   }
 }

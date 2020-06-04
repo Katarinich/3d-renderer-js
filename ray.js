@@ -1,6 +1,6 @@
-export default class Ray {
-  constructor(origin, destination) {
+class Ray {
+  constructor(origin, direction) {
     this.origin = origin;
-    this.destination = destination;
+    this.direction = direction;
   }
 }
